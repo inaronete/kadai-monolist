@@ -9,16 +9,21 @@
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <div class="form-group">
                         {!! Form::label('name','お名前') !!}
-                        {!! Form::text('name',old('name'),['class' => 'form-control' ]) !!}
+                        {!! Form::text('name',old('name'), ['class' => 'form-control']) !!}
                     </div>
                     
                     <div class="form-group">
                         {!! Form::label('email','メールアドレス') !!}
-                        {!! Form::email('email,old('email'), ['class' => 'form-control']) !!}
+                        {!! Form::email('email',old('email'), ['class' => 'form-control']) !!}
                     </div>
                     
                     <div class="form-group">
-                        {!! Form::label('password',パスワード（確認) ') !!}
+                        {!! Form::label('password','パスワード') !!}
+                        {!! Form::password('password', ['class' => 'form-control']) !!}
+                    </div>
+                    
+                    <div class="form-group">
+                        {!! Form::label('password_confirmation','パスワード（確認) ') !!}
                         {!! Form::password('password_confirmation',['class' => 'form-control']) !!}
                     </div>
                     
