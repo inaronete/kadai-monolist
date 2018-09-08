@@ -28,7 +28,7 @@
                     </div>
                     <div class="panel-body">
                         @foreach ($want_users as $user)
-                            <a href="{{ route('users.show', $user->id) }}">(( $user->name }}</a>
+                            <a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a>
                         @endforeach
                     </div>
                 </div>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    protected $fillable = ['code', 'name', 'url'.'image_url'];
+    protected $fillable = ['code', 'name', 'url','image_url'];
     
     
     public function users()
@@ -17,5 +17,10 @@ class Item extends Model
     public function want_users()
     {
         return $this->users()->where('type','want');
+    }
+    
+     public function have_users()
+    {
+        return $this->users()->where('type','have');
     }
 }

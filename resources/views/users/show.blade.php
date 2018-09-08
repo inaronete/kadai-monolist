@@ -1,9 +1,9 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
     <div class="user-profile">
         <div class="icon text-center">
-            <img src="{{ Gravatar::src($user->email. 100) . '&d=mm' }}" alt="" class="img-circle">        
+            <img src="{{ Gravatar::src($user->email, 100) . '&d=mm' }}" alt="" class="img-circle">        
         </div>
         <div class="name text-center">
             <h1>{{ $user->name }}</h1>
@@ -19,12 +19,12 @@
                 <li>
                     <div class="status-label">HAVE</div>
                     <div id="have_count" class="status-value">
-                        xxx
+                        {{ $count_have }}
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    @include('item.itmes', ['items' => $items])
-    {!! $items->render() !!}}
+    @include('items.items', ['items' => $items])
+    {!! $items->render() !!}
 @endsection
