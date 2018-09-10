@@ -39,6 +39,6 @@ class RankingController extends Controller
         
         return view('ranking.have', [
             'items' => $items,
-            ]);
+         ]);
     }
 }

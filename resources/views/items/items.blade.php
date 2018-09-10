@@ -15,14 +15,16 @@
                             @endif
                             <div class="buttons text-center">
                                 @if (Auth::check())
-                                    @include('items.want_button', ['item' => $item])
-                                    @include('items.have_button', ['item' => $item])
+                                    @include('items.want_button', ['item' => $item, 'type' => 'want'])
+                                    @include('items.have_button', ['item' => $item, 'type' => 'want'])
                                 @endif
                             </div>
                         </div>
                         @if (isset($item->count))
                             <div class="panel-footer">
+                              
                                 <p class="text-center">{{ $key+1 }}位: {{ $item->count }} Wants</p>
+                                
                                 <p class="text-center">{{ $key+1 }}位: {{ $item->count }} Haves</p>
                             </div>
                         @endif
